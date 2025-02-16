@@ -1,9 +1,12 @@
 import{ Button } from "@/components/ui/button";
+import{ Input } from "@/components/ui/input";
+import{ Select } from "@/components/ui/select";
 
 export default function Home() {
   return (
     <div className="">
-      <Button variant='primary'>
+      <Input></Input>
+      <Button size ="xs">
         Primary
       </Button>
       <Button variant='secondary'>
