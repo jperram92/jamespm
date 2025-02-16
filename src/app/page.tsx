@@ -7,7 +7,7 @@ export default function Home() {
     <div className="">
       <Input></Input>
       <Button size ="xs">
-        Primary
+        Primary123456789
       </Button>
       <Button variant='secondary'>
         Secondary
