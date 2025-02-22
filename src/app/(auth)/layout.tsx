@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
@@ -17,8 +18,10 @@ const AuthLayout = ({ children}:AuthLayoutProps) => {
             <div className="mx-auto max-w-screen-2xl p-4">
                 <nav className="flex justify-between items-center">
                     <Image src = "/Stojeft Image.png" alt="logo" width={152} height={56} />
-                        <Button variant="secondary">
-                            {pathname === "/sign-in"? "Sign Up" : "Login"}
+                        <Button asChild variant="secondary">
+                            <Link href={pathname === "/sign-in" ? "/sign-up" : "/sign-in"}>
+                                {pathname === "/sign-in"? "Sign Up" : "Login"}
+                            </Link>
                         </Button>
                 </nav>
                 <div className="flex flex-col items-center justify-center pt-4 md:pt-14">
