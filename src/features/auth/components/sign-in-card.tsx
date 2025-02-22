@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa"
 import  Link  from "next/link";
 import { useForm  } from "react-hook-form";
 import { zodResolver} from "@hookform/resolvers/zod";
+import { loginSchema } from "../schemas";
 
 import { DottedSeparator } from "@/components/dotted-separator";
 import { Input} from "@/components/ui/input";   
@@ -23,16 +24,10 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 
-const formSchema = z.object({
-    name: z.string().trim().min(1, "Required"),
-    email: z.string().email(),
-    password: z.string().min(8, "Minimum of 8 characters"),
-})
-
 export const SignUpCard = () => {
 
-    const form = useForm<z.infer<typeof formSchema>>({
-            resolver: zodResolver(formSchema),
+    const form = useForm<z.infer<typeof loginSchema>>({
+            resolver: zodResolver(loginSchema),
             defaultValues: {
                 name: "",
                 email: "",
@@ -40,7 +35,7 @@ export const SignUpCard = () => {
             },
         });
     
-        const onSubmit = (values: z.infer<typeof formSchema>) => {
+        const onSubmit = (values: z.infer<typeof loginSchema>) => {
             console.log({values});
         }
 
