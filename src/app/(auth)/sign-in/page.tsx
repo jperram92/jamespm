@@ -1,6 +1,6 @@
 "use client";
 
-import { SignInCard } from "@/features/auth/components/sign-in-card"
+import { SignInCard } from "@/features/auth/components/sign-up-card"
 
 const SignInPage = () => {
     return <SignInCard />; // Render the SignInCard component in the SignInPage
