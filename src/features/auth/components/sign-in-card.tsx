@@ -77,7 +77,7 @@ export const SignUpCard = () => {
                     size = "lg"
                     className = "w-full"
                 >
-                    <FcGoogle className="size-5 mr-2" />
+                    <FcGoogle />
                     Login with Google
                 </Button>
                 <Button
@@ -86,7 +86,7 @@ export const SignUpCard = () => {
                     size = "lg"
                     className = "w-full"
                 >
-                    <FaGithub className="size-5 mr-2" />
+                    <FaGithub />
                     Login with Github
                 </Button>
             </CardContent>
